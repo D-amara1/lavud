@@ -10,11 +10,14 @@ body {
 
 
 header {
+    display: flex;
+    justify-content: space-between;
     background: #333;
     color: #fff;
-    padding: 1rem 0;
+    padding: 1rem;
     text-align: center;
     position: relative;
+
 }
 
 nav ul {
@@ -46,6 +49,48 @@ nav ul li a:hover, nav a.active {
     border-radius: 5px;
 }
 
+
+
+
+
+/* Botão de ativar o menu */
+.menu-toggle {
+    background-color: #444;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .menu-toggle:hover {
+    background-color: #555;
+  }
+  
+  /* Estilos para tornar o menu visível */
+  .menu.active {
+    display: block;  /* Quando ativado, o menu será mostrado */
+  }
+  
+  /* Responsividade para dispositivos móveis */
+  @media screen and (max-width: 768px) {
+    nav {
+      flex-direction: column;  /* Coloca os itens do nav em coluna */
+      align-items: center;
+    }
+  
+    .menu-toggle {
+      width: 100%;  /* Faz o botão ocupar toda a largura no mobile */
+      text-align: center;
+    }
+  
+    .menu ul {
+      padding: 0;
+    }
+  
+    .menu ul li {
+      width: 100%;
+    }
+  }
 
 main {
     padding: 20px;
@@ -89,5 +134,109 @@ container{
     left: 10px; /* Distância da esquerda */
     width: 100px; /* Ajuste o tamanho conforme necessário */
     height: auto; /* Mantém a proporção da imagem */
+    margin-top: 40px;
 }
 
+
+
+
+
+/* CSS Geral (para computadores) */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+  }
+  
+  .image {
+    width: 200px;  /* Tamanho fixo para imagens no computador */
+    height: auto;
+    margin-bottom: 10px;
+  }
+  
+  .div-container {
+    width: 45%;  /* Divs com 45% de largura */
+    margin-bottom: 20px;
+  }
+  
+  /* Responsividade para dispositivos móveis */
+  @media screen and (max-width: 768px) {
+    .container {
+      flex-direction: column;  /* Coloca os itens em uma coluna */
+      align-items: center;
+    }
+  
+    .image {
+      width: 100%;  /* As imagens ocupam toda a largura disponível */
+      height: auto;
+    }
+  
+    .div-container {
+      width: 100%;  /* As divs ocupam toda a largura */
+      margin-bottom: 20px;
+    }
+  }
+  
+
+
+
+  img {
+    width: 100%;  /* Faz a imagem se ajustar à largura do contêiner */
+    height: auto;  /* Mantém a proporção da imagem */
+    display: block;  /* Remove espaços em branco embaixo da imagem */
+  }
+  
+
+
+
+
+
+
+
+
+
+  /* Estilos do menu */
+.menu {
+    display: none;  /* O menu começa escondido */
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+  }
+  
+  .menu ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .menu ul li {
+    margin: 10px 0;
+  }
+  
+  .menu ul li a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  /* Botão de ativar o menu */
+  .menu-toggle {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .menu-toggle:hover {
+    background-color: #555;
+  }
+  
